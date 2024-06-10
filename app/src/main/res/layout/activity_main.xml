@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <LinearLayout
+       android:id="@+id/linearLayout1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       custom:layout_constraintEnd_toEndOf="parent"
+       custom:layout_constraintStart_toStartOf="parent"
+       custom:layout_constraintTop_toBottomOf="@+id/sudokuBoard">
+
+      <Button
+          android:id="@+id/button_one"
+          style="@style/BorderlessButton"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="BTNOnePress"
+          android:text="@string/one"
+          android:textColor="@color/black"
+          android:textSize="24sp" />
+
+      <Button
+          android:id="@+id/button_two"
+          style="@style/BorderlessButton"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="BTNTwoPress"
+          android:text="@string/two"
+          android:textColor="@color/black"
+          android:textSize="24sp" />
+
+      <Button
+          android:id="@+id/button_three"
+          style="@style/BorderlessButton"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="BTNThreePress"
+          android:text="@string/three"
+          android:textColor="@color/black"
+          android:textSize="24sp" />
+
+      <Button
+          android:id="@+id/button_four"
+          style="@style/BorderlessButton"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="BTNFourPress"
+          android:text="@string/four"
+          android:textColor="@color/black"
+          android:textSize="24sp" />
+
+      <Button
+          android:id="@+id/button_five"
+          style="@style/BorderlessButton"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="BTNFivePress"
+          android:text="@string/five"
+          android:textColor="@color/black"
+          android:textSize="24sp" />
+
+      <Button
+          android:id="@+id/button_six"
+          style="@style/BorderlessButton"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="BTNSixPress"
+          android:text="@string/six"
+          android:textColor="@color/black"
+          android:textSize="24sp" />
+
+      <Button
+          android:id="@+id/button_seven"
+          style="@style/BorderlessButton"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="BTNSevenPress"
+          android:text="@string/seven"
+          android:textColor="@color/black"
+          android:textSize="24sp" />
+   </LinearLayout>
+
+   <LinearLayout
+       android:id="@+id/linearLayout2"
+       android:layout_width="131dp"
+       android:layout_height="48dp"
+       android:orientation="horizontal"
+       custom:layout_constraintStart_toStartOf="parent"
+       custom:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+
+      <Button
+          android:id="@+id/button_eight"
+          style="@style/BorderlessButton"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="BTNEightPress"
+          android:text="@string/eight"
+          android:textColor="@color/black"
+          android:textSize="24sp" />
+
+      <Button
+          android:id="@+id/button_nine"
+          style="@style/BorderlessButton"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:onClick="BTNNinePress"
+          android:text="@string/nine"
+          android:textColor="@color/black"
+          android:textSize="24sp" />
+   </LinearLayout>
+
+   <com.example.mysudokusolver.SudokuBoard
+       android:id="@+id/sudokuBoard"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       custom:boardColor="#000000"
+       custom:cellFillColor="#6600ddff"
+       custom:cellsHighlightColor="#2600ddff"
+       custom:letterColor="#FF000000"
+       custom:letterColorSolve="#62CCC2"
+       custom:layout_constraintDimensionRatio="1:1"
+       custom:layout_constraintEnd_toEndOf="parent"
+       custom:layout_constraintStart_toStartOf="parent"
+       custom:layout_constraintTop_toTopOf="parent"
+       tools:ignore="MissingClass">
+</com.example.mysudokusolver.SudokuBoard>
+
+   <Button
+       android:id="@+id/button_solve"
+       style="@style/BorderlessButton"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="144dp"
+       android:onClick="solveSudoku"
+       android:text="Solve"
+       android:textColor="@color/black"
+       android:background="#53B3AA"
+       android:textSize="24sp"
+       custom:layout_constraintBottom_toBottomOf="parent"
+       custom:layout_constraintEnd_toEndOf="parent"
+       custom:layout_constraintHorizontal_bias="0.498"
+       custom:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
